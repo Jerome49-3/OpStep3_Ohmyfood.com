@@ -97,8 +97,8 @@
 }
 @keyframes rotation-check {
   0% {
-    -webkit-transform: rotateZ(0);
-    transform: rotateZ(0);
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(5deg);
   }
   100% {
     -webkit-transform: rotateZ(360deg);
@@ -133,15 +133,19 @@
   }
   25% {
     margin-right: -3em;
+    transition-delay: 4OOms;
   }
   50% {
     margin-right: -2em;
+    transition-delay: 6OOms;
   }
   75% {
     margin-right: -1em;
+    transition-delay: 8OOms;
   }
   100% {
     margin-right: 0em;
+    transition-delay: 10OOms;
   }
 }
 @-webkit-keyframes scale-in-ver-top {
@@ -588,61 +592,11 @@ li {
   .resto__cards {
     width: 48%;
   }
-}
-@media screen and (max-width: 992px) {
   .geoloc {
-    width: 50%;
+    gap: 5%;
   }
-  .section__resto {
-    width: 85%;
-  }
-  .fonctionmt__nb {
-    left: -13pt;
-    transition: all 1s ease-in;
-  }
-}
-@media screen and (min-width: 768px) {
-  .geoloc__icone, .geoloc__txt {
-    font-size: 40px;
-  }
-  .fonctionmt__nb {
-    left: -14pt;
-    transition: all 1s ease-in;
-  }
-}
-@media screen and (max-width: 768px) {
-  .geoloc {
-    width: 50%;
-  }
-  .present__h1, .present__p {
-    font-size: 20px;
-  }
-  .present__h1, .present__p {
-    width: 100%;
-    letter-spacing: 0;
-  }
-  .present__p {
-    width: 80%;
-  }
-  .present__div {
-    width: 28%;
-    transition: all 1s linear;
-    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.6);
-    font-size: large;
-    flex-shrink: 0;
-    width: 360px;
-  }
-  .fonctionmt__divbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    transition: all 1.5s ease-in-out;
-    width: 90%;
-    flex-wrap: wrap;
-  }
-  .footer {
-    justify-content: center;
+  .geoloc__txt {
+    width: 15Vw;
   }
 }
 
