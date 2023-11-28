@@ -636,5 +636,10 @@ li {
     gap: 5%;
   }
 }
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  .fonctionmt__divbox {
+    margin: 0 0 0 10px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

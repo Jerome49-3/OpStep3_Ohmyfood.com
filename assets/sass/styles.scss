@@ -112,9 +112,9 @@ li {
     color: $blanc;
     @include flexcenter;
     &__p {
-        @include flexcenter;
-        width: 90%;
-      }
+      @include flexcenter;
+      width: 90%;
+    }
   }
 }
 
@@ -270,7 +270,12 @@ li {
   .boxLogo__boxImg__img {
     width: 60%;
   }
-    .geoloc {
+  .geoloc {
     gap: 5%;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 768px){
+  .fonctionmt__divbox {
+    margin: 0 0 0 10px;
   }
 }
