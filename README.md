@@ -2,7 +2,7 @@
 <h1 align="center">Hi 👋, I'm jerome Bobin</h1>
 <h3 align="center">A passionate frontend developer from France</h3>
 
-- 🔭 I’m currently working on **Loader Halloween for Codepen**
+- 🔭 I’m currently working on studing Django
 
 - 🌱 I’m currently learning **Django**
 
