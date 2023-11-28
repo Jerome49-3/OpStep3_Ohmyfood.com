@@ -97,11 +97,9 @@
 }
 @keyframes rotation-check {
   0% {
-    -webkit-transform: rotateZ(45deg);
     transform: rotateZ(5deg);
   }
   100% {
-    -webkit-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
     transition-duration: 500ms;
   }
@@ -148,34 +146,14 @@
     transition-delay: 10OOms;
   }
 }
-@-webkit-keyframes scale-in-ver-top {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
 @keyframes scale-in-ver-top {
   0% {
-    -webkit-transform: scaleY(0);
     transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
     transform-origin: 100% 0%;
     opacity: 1;
   }
   100% {
-    -webkit-transform: scaleY(1);
     transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
     transform-origin: 100% 0%;
     opacity: 1;
   }
@@ -188,6 +166,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: all 0.3s;
 }
 
 a {
@@ -346,14 +325,14 @@ li {
 }
 .present__h1, .present__p {
   font-weight: 800;
-  width: 60%;
+  width: 90%;
   letter-spacing: 5px;
   margin: 10px 0 5px 0px;
   text-align: center;
 }
 .present__p {
   font-weight: normal;
-  width: 40%;
+  width: 90%;
   margin: 20px 0px 20px 0px;
 }
 .present__btnexploresto {
@@ -453,7 +432,8 @@ li {
   align-items: center;
   width: 100%;
   height: 230px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -598,6 +578,4 @@ li {
   .geoloc__txt {
     width: 15Vw;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

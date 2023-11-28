@@ -1,0 +1,276 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_functions.scss";
+@import "_buttons.scss";
+@import "_forms.scss";
+@import "effects.scss";
+
+/*************************************** ROOT **********************************************/
+
+* {
+  font-family: "roboto";
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+/*************************************** BODY **********************************************/
+
+#body {
+  @include columnaround100;
+}
+.boxLogo,
+.header,
+.present,
+#section-geoloc,
+.geoloc .resto,
+.fonctionmt,
+#tssections {
+  @extend #body;
+}
+
+/*************************************** LOADER **********************************************/
+
+.loaderbox {
+  @include loaderbox;
+}
+.loader {
+  @include loader;
+}
+
+/*************************************** HEADER **********************************************/
+
+.boxLogo {
+  margin: 10px 0px 10px 0px;
+  &__boxImg {
+    @include flexcenter100;
+    padding: 10px 0 10px 0;
+    &__img {
+      margin-top: 0;
+      @extend .boxLogo__boxImg;
+      width: 85%;
+    }
+  }
+}
+
+/***************************************SECTION GEOLOC **********************************************/
+
+.geoloc__icone,
+.geoloc__txt {
+  font-size: 24px;
+}
+.geoloc {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  &__icone {
+    width: 20%;
+  }
+  &__txt {
+    border: none;
+    width: 165px;
+  }
+}
+
+/***************************************SECTION DESCRIPTION **********************************************/
+
+.present__h1,
+.present__p {
+  font-size: 30px;
+}
+.present {
+  @include flexcenter100;
+  margin: 30px 0 30px 0px;
+  &__h1 {
+    font-weight: 800;
+    width: 90%;
+    letter-spacing: 5px;
+    margin: 10px 0 5px 0px;
+    text-align: center;
+  }
+  &__p {
+    @extend .present__h1;
+    font-weight: normal;
+    width: 90%;
+    @include margin20TB;
+  }
+  &__btnexploresto {
+    @include btnexploresto;
+  }
+  &__a {
+    color: $blanc;
+    @include flexcenter;
+    &__p {
+        @include flexcenter;
+        width: 90%;
+      }
+  }
+}
+
+/***************************************SECTION FONCTIONNEMENT **********************************************/
+
+.fonctionmt {
+  width: 95%;
+  &__h1 {
+    width: 90%;
+  }
+  &__divbox {
+    width: 90%;
+  }
+  &__div {
+    @include margin20TB;
+    color: $noir;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+    transition: all 1s linear;
+    width: 100%;
+    flex-shrink: 0;
+    max-width: 420px;
+    position: relative;
+    &:hover,
+    &:focus {
+      background-color: lighten($violet, 35%);
+      color: $violet;
+      .fonctionmt__h3 {
+        color: $noir;
+      }
+    }
+  }
+  &__i {
+    font-size: xx-large;
+  }
+  &__nb {
+    @include flexcenter;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    background: $violet;
+    color: $blanc;
+    position: absolute;
+    z-index: 1;
+    left: -23px;
+  }
+}
+
+/***************************************SECTION RESTAURANTS **********************************************/
+
+.resto {
+  @include columncenter100;
+  @include margin10TB;
+  &__h2 {
+    @extend .resto;
+  }
+  &__cards {
+    width: 100%;
+    background-color: $blanc;
+    box-shadow: 2px 2px 5px grey;
+    border-radius: 20px;
+    @include margin20TB;
+  }
+  &__a {
+    color: $noir;
+  }
+  &__imgresto {
+    @include flexcenter;
+    @include imgresto;
+  }
+  &__txtcards {
+    @include textcards;
+  }
+}
+.resto__a,
+.nouveau {
+  position: relative;
+}
+.nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: $vert;
+  color: darken($vert, 50%);
+  padding: 10px 20px 10px 20px;
+  right: 30px;
+  top: 20px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/*************************************** FOOTER **********************************************/
+
+.footer {
+  @include footer;
+}
+
+/*************************************** MEDIA QUERIES **********************************************/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .fonctionmt {
+    &__h1 {
+      transform: translateX(152pt);
+      transition: all 1.5s ease-in-out;
+    }
+    &__div {
+      width: 100%;
+      flex-shrink: 0;
+      width: 380px;
+    }
+    &__divbox {
+      @include flexcenter100;
+      @include margin20TB;
+      flex-direction: column;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonctionmt__divbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    transition: all 1.5s ease-in-out;
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  .present__btnexploresto {
+    width: 32%;
+    font-size: 28px;
+    height: 80px;
+    transition: all 1.5s ease-in-out;
+  }
+  .resto {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    &__cards {
+      width: 48%;
+    }
+  }
+  .geoloc {
+    &__txt {
+      width: 15vw;
+      font-size: 36px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .boxLogo__boxImg__img {
+    width: 60%;
+  }
+    .geoloc {
+    gap: 5%;
+  }
+}

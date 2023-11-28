@@ -1,0 +1,8 @@
+index style:
+
+sass ../assets/sass/styles.scss ../assets/css/styles.css
+
+
+pages style
+
+sass ../assets/sass/styles-pages.scss ../assets/css/styles-pages.css

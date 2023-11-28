@@ -4,13 +4,13 @@
     font-family: 'Shrikhand';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/shrikhand-v11-latin-regular.eot'); // IE9 Compat Modes
+    src: url('../assets/fonts/shrikhand-v11-latin-regular.eot'); // IE9 Compat Modes
     src: local(''),
-         url('../fonts/shrikhand-v11-latin-regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
-         url('../fonts/shrikhand-v11-latin-regular.woff2') format('woff2'), // Super Modern Browsers
-         url('../fonts/shrikhand-v11-latin-regular.woff') format('woff'), // Modern Browsers
-         url('../fonts/shrikhand-v11-latin-regular.ttf') format('truetype'), // Safari, Android, iOS
-         url('../fonts/shrikhand-v11-latin-regular.svg#Shrikhand') format('svg'); // Legacy iOS
+         url('../assets/fonts/shrikhand-v11-latin-regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+         url('../assets/fonts/shrikhand-v11-latin-regular.woff2') format('woff2'), // Super Modern Browsers
+         url('../assets/fonts/shrikhand-v11-latin-regular.woff') format('woff'), // Modern Browsers
+         url('../assets/fonts/shrikhand-v11-latin-regular.ttf') format('truetype'), // Safari, Android, iOS
+         url('../assets/fonts/shrikhand-v11-latin-regular.svg#Shrikhand') format('svg'); // Legacy iOS
 }
 // MIXIN AJUST FLEX
 @mixin flexcenter {
@@ -43,6 +43,11 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+}
+@mixin spacearound{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 @mixin spacearound100{
     display: flex;
@@ -249,6 +254,7 @@
     height: 70px;
     @include margin20TB;
     padding-left: 10px;
+    @include flexcenter;
 }
 @mixin texthidden{
     text-overflow: ellipsis;
