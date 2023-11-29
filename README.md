@@ -1,6 +1,6 @@
 # ohmyfood-step3
 <h1 align="center">Hi 👋, I'm jerome Bobin</h1>
-<h3 align="center">A passionate frontend developer from France</h3>
+<h3 align="center">A passionate Studend frontend developer from France</h3>
 
 - 🔭 I’m currently working on studing Django
 
